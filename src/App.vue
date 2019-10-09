@@ -3,7 +3,7 @@
         <el-col :span="24">
           <router-view/>
         </el-col>
-        <div class="footer">
+        <div class="footer" v-if="this.$route.path=='/home' | this.$route.path=='/classify' | this.$route.path=='/channel' | this.$route.path=='/mine'">
             <div v-for="item in menus" :key="item.name" class="nav">
                 <router-link :to="item.path" active-class="current">
                         <i :class="item.icon"></i>
@@ -61,13 +61,13 @@ export default {
 }
 .footer {
   width: 100%;
-  height: 51px;
+  height: 3.1875rem;
   display: flex;
   position: fixed;
   bottom: 0;
   left: 0;
-  border-top: 1px solid #999;
-  padding: 5px 0 ;
+  border-top: .0625rem solid #999;
+  padding: .3125rem 0 ;
   background-color: #fff;
   z-index: 20;
 
@@ -77,17 +77,18 @@ export default {
   a{
   width: 100%;
   text-decoration: none;
-  height: 51px;
+  height: 3.1875rem;
   color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   i{
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #999;
   }
   span{
+    font-size: 1rem;
     transform: scale(0.8);
     color: #999;
   }

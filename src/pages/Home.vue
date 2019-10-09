@@ -1,16 +1,16 @@
 <template>
     <div class="home">
          <div class="block">
-            <el-carousel height="240px" indicator-position="none">
+            <el-carousel height="15rem" indicator-position="none">
                 <el-carousel-item v-for="item in 7" :key="item">
                     <img :src="require(`../assets/home/banner${item}.jpg`)" >
                 </el-carousel-item>
             </el-carousel>
-            <input type="text" class="search" placeholder="熊本熊">
+            <input type="text" class="search" placeholder="熊本熊" style="font-size:0.625rem">
             <i class="el-icon-search"></i>
             <i class="el-icon-chat-dot-round"></i>
         </div>
-        <el-col :span="22" offset="1" class="rebate">
+        <el-col :span="22" :offset="1" class="rebate">
             <img src="../assets/home/rebate.jpg" alt="">
             <ul>
                 <li v-for="item in rebate" :key="item.title">
@@ -21,7 +21,7 @@
         </el-col>
         <div class="xpsx">
             <div class="tit">
-                <img src="../assets/home/2017_12_19_14_40_52_8584_26x26.jpg" alt="">
+                <i class="el-icon-s-unfold"></i>
                 新品上新
             </div>
             <div>
@@ -58,7 +58,7 @@
                 <i class="el-icon-time"></i>
                 凡客T恤
             </div>
-            <el-carousel height="240px" indicator-position="none">
+            <el-carousel height="15rem" indicator-position="none">
                 <el-carousel-item v-for="item in 4" :key="item">
                     <img :src="require(`../assets/home/fanketx${item}.jpg`)" >
                 </el-carousel-item>
@@ -94,6 +94,10 @@ export default {
         }
       ]
     };
+  },
+  beforeRouterLeave(to,from,next){
+    console.log('beforeRouterLeave');
+    
   }
 };
 </script>
@@ -115,51 +119,52 @@ export default {
   }
   .search {
     width: 80%;
-    height: 25px;
-    padding-left: 40px;
+    height: 1.5625rem;
+    padding-left: 2.5rem;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     position: absolute;
-    top: 10px;
-    left: 15px;
+    top: .625rem;
+    left: .9375rem;
     z-index: 9;
   }
   .el-icon-search {
-    font-size: 22px;
+    font-size: 1.375rem;
     position: absolute;
-    top: 12px;
-    left: 25px;
+    top: .75rem;
+    left: 1.5625rem;
     z-index: 10;
   }
   .el-icon-chat-dot-round {
-    font-size: 28px;
+    font-size: 1.75rem;
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: .625rem;
+    right: 1.25rem;
     z-index: 10;
   }
 }
 .rebate {
-  margin: 15px 0 10px 0;
+  margin: .9375rem 0 .625rem 0;
   img {
     width: 100%;
   }
   ul {
     width: 100%;
     display: flex;
-    margin-top: 10px;
+    margin-top: .625rem;
     li {
       width: 20%;
-      height: 58px;
+      height: 3.625rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       img {
-        width: 34px;
+        width: 2.125rem;
       }
       span {
+        font-size: 1rem;
         transform: scale(0.7);
       }
     }
@@ -170,26 +175,27 @@ export default {
   height: 100%;
   .tit {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 15px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: .9375rem;
     box-sizing: border-box;
-    img {
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
-      margin-top: 12px;
+    font-size: .75rem;
+    i {
+      margin-right: .625rem;
+      margin-top: .75rem;
+      color: red;
+      margin-left: -0.3125rem;
     }
   }
   div {
     width: 100%;
-    height: 104px;
+    height: 6.5rem;
     display: flex;
     box-sizing: content-box;
     overflow: auto;
     img {
-      width: 160px;
-      margin-left: 5px;
+      width: 10rem;
+      margin-left: .3125rem;
     }
     img:nth-child(1) {
       margin-left: 0;
@@ -199,30 +205,31 @@ export default {
 .mrms {
   width: 100%;
   height: 100%;
-  margin-top: 10px;
+  margin-top: .625rem;
   .tit {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 15px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: .9375rem;
     box-sizing: border-box;
+    font-size: .75rem;
     i {
-      margin-right: 10px;
-      margin-top: 12px;
+      margin-right: .625rem;
+      margin-top: .75rem;
       color: red;
-      margin-left: -5px;
+      margin-left: -0.3125rem;
     }
   }
   div {
     width: 100%;
-    height: 152px;
+    height: 9.5rem;
     display: flex;
     box-sizing: content-box;
     overflow: auto;
     img {
-      width: 97px;
-      height: 125px;
-      margin-left: 8px;
+      width: 6.0625rem;
+      height: 7.8125rem;
+      margin-left: .5rem;
     }
     img:nth-child(1) {
       margin-left: 0;
@@ -232,15 +239,16 @@ export default {
 .fanketx {
   .tit {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 15px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: .9375rem;
     box-sizing: border-box;
+    font-size: .75rem;
     i {
-      margin-right: 5px;
-      margin-top: 12px;
+      margin-right: .3125rem;
+      margin-top: .75rem;
       color: red;
-      margin-left: -5px;
+      margin-left: -0.3125rem;
     }
   }
   img {

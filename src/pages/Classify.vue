@@ -1,5 +1,5 @@
 <template>
-    <div style="padding: 48px 0 51px 0;">
+    <div style="padding: 3rem 0 3.1875rem 0;">
         <header class="header">
             <i class="el-icon-arrow-left" @click="goOff"></i>
             分类
@@ -7,55 +7,55 @@
         <div>
              <el-tabs tab-position="left" style="height: 100%;">
                 <el-tab-pane label="推荐">
-                    <el-col :span="8" v-for="item in tuijian" :key="item" class="details">
+                    <el-col :span="8" v-for="item in tuijian" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="男孩">
-                    <el-col :span="8" v-for="item in nanhai" :key="item" class="details">
+                    <el-col :span="8" v-for="item in nanhai" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="女孩">
-                    <el-col :span="8" v-for="item in nvhai" :key="item" class="details">
+                    <el-col :span="8" v-for="item in nvhai" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="男鞋">
-                    <el-col :span="8" v-for="item in nanxie" :key="item" class="details">
+                    <el-col :span="8" v-for="item in nanxie" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="女鞋">
-                    <el-col :span="8" v-for="item in nvxie" :key="item" class="details">
+                    <el-col :span="8" v-for="item in nvxie" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="袜品">
-                    <el-col :span="8" v-for="item in wapin" :key="item" class="details">
+                    <el-col :span="8" v-for="item in wapin" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="家居">
-                    <el-col :span="8" v-for="item in jiaju" :key="item" class="details">
+                    <el-col :span="8" v-for="item in jiaju" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="童装">
-                    <el-col :span="8" v-for="item in tongzhuang" :key="item" class="details">
+                    <el-col :span="8" v-for="item in tongzhuang" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
                 </el-tab-pane>
                 <el-tab-pane label="内衣">
-                    <el-col :span="8" v-for="item in neiyi" :key="item" class="details">
+                    <el-col :span="8" v-for="item in neiyi" :key="item.img" class="details">
                         <img :src="require(`../assets/classify/${item.img}`)" alt="" style="width:80%">
                         <span>{{item.text}}</span>
                     </el-col>
@@ -206,19 +206,19 @@ export default {
 <style lang="scss" scoped>
   .header {
     width: 100%;
-    height: 48px;
+    height: 3rem;
     background-color: #b81c22;
     text-align: center;
-    line-height: 48px;
+    line-height: 3rem;
     color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     i {
-      font-size: 30px;
+      font-size: 1.875rem;
       position: absolute;
-      top: 10px;
-      left: 20px;
+      top: .625rem;
+      left: 1.25rem;
     }
   }
   .details{
@@ -226,10 +226,10 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top:10px;
+      padding-top:.625rem;
       color: #999;
       span{
-          margin-top: 5px;
+          margin-top:.3125rem;
           transform: scale(0.8)
       }
   }

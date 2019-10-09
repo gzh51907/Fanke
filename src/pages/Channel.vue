@@ -1,5 +1,5 @@
 <template>
-    <div style="padding: 48px 0 51px 0;">
+    <div style="padding: 3rem 0 3.1875rem 0;">
         <header class="header">
             <i class="el-icon-arrow-left" @click="goOff"></i>
             频道
@@ -21,19 +21,19 @@ export default {
 <style lang="scss" scoped>
   .header {
     width: 100%;
-    height: 48px;
+    height: 3rem;
     background-color: #b81c22;
     text-align: center;
-    line-height: 48px;
+    line-height: 3rem;
     color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     i {
-      font-size: 30px;
+      font-size: 1.875rem;
       position: absolute;
-      top: 10px;
-      left: 20px;
+      top: .625rem;
+      left: 1.25rem;
     }
   }
   .content{
